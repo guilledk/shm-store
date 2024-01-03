@@ -1,0 +1,34 @@
+{
+    "name": "shm-store",
+    "version": "1.0.0-rc1",
+    "description": "Datastructure for sharing BSON serialized objects with workers",
+    "main": "./build/index.js",
+    "type": "module",
+    "exports": {
+        ".": {
+            "import": "./build/index.js"
+        }
+    },
+    "scripts": {
+        "bootstrap": "yarn",
+        "build": "npm run bootstrap && tsc",
+        "test": "npm run build && mocha build/tests/test-sos.spec.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/guilledk/shm-store.git"
+    },
+    "author": "Guillermo Rodriguez",
+    "license": "MIT",
+    "dependencies": {
+        "bson": "^6.2.0"
+    },
+    "devDependencies": {
+        "@types/chai": "^4.3.11",
+        "@types/mocha": "^10.0.6",
+        "@types/node": "^18.11.13",
+        "chai": "^5.0.0",
+        "mocha": "^10.2.0",
+        "typescript": "^5.0.4"
+    }
+}
