@@ -1,0 +1,11 @@
+src
+packages
+scripts
+build/**/*.ts
+build/**/*.map
+!build/**/*.d.ts
+.idea
+*.tgz
+tsconfig.*
+yarn.lock
+.gitignore
